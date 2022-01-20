@@ -1,6 +1,5 @@
 import { Card, makeStyles, Paper, Typography } from "@material-ui/core";
 
-
 const useStyles = makeStyles(theme => ({
     root: {
         backgroground: "fdfdff",

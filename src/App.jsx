@@ -1,11 +1,12 @@
 //import logo from './logo.svg';
 // import './App.css';
-import NavBar from './components/navBar/NavBar'
 
 import { CssBaseline, Grid, makeStyles } from "@material-ui/core";
-import LeftBar from './components/leftBar/LeftBar';
-import Main from './components/main/Main';
-import RightBar from './components/rightBar/RightBar';
+
+import NavBar from './components/NavBar'
+import LeftBar from './components/LeftBar';
+// import Main from './components/main/Main';
+// import RightBar from './components/rightBar/RightBar';
 import Employees from './pages/Employees/Employees';
 
 const useStyles = makeStyles((theme) => ({

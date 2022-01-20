@@ -1,11 +1,11 @@
 import { Grid } from '@material-ui/core';
-import React, { } from 'react';
+import React, { useEffect } from 'react';
 import { useForm, Form } from '../../components/useForm';
 
 import Input from '../../components/controls/Input';
 import RadioGroup from '../../components/controls/RadioGroup';
 import Select from '../../components/controls/Select';
-import * as userService from "../../services/userService";
+import * as employeeeService from "../../services/employeeService";
 import Checkbox from '../../components/controls/CheckBox';
 import DatePicker from '../../components/controls/DatePicker';
 import Button from '../../components/controls/Button';
@@ -27,7 +27,8 @@ const initialValues = {
     hiredDate: new Date(),
     isPermanent: false,
 }
-const UsersForm = () => {
+const EmployeeForm = (props) => {
+    const { addOrEdit, recordForEdit  } = props;
 
     const validate = (fieldValues = values) => {
         let temp = { ...errors }
@@ -58,11 +59,18 @@ const UsersForm = () => {
 
     const handleSubmit = e => {
         e.preventDefault()
-        debugger;
-        if (validate())
-            userService.insertEmployee(values);
+        if (validate()) {
+            addOrEdit(values, resetForm);
+        }
 
     }
+
+    useEffect(() => {
+        if (recordForEdit != null)
+            setValues({
+                ...recordForEdit
+            })
+    }, [recordForEdit])
 
     return (
         <Form onSubmit={handleSubmit}>
@@ -111,7 +119,7 @@ const UsersForm = () => {
                         label="Department"
                         value={values.departmentId}
                         onChange={handleInputChange}
-                        options={userService.getDepartmentCollection()}
+                        options={employeeeService.getDepartmentCollection()}
                         error={errors.departmentId}
                     />
                     <DatePicker
@@ -142,4 +150,4 @@ const UsersForm = () => {
     )
 }
 
-export default UsersForm;
+export default EmployeeForm;

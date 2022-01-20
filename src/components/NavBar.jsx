@@ -1,6 +1,7 @@
 import { AppBar, Badge, makeStyles, Toolbar, Typography, Avatar } from "@material-ui/core";
 import { Mail, Notifications } from "@material-ui/icons";
 
+
 const useStyles = makeStyles((theme) => ({
     root: {
         transform: 'translateZ(0)'
@@ -34,7 +35,7 @@ const NavBar = () => {
     const classes = useStyles();
     return (
         <AppBar position="fixed" className={classes.root}>
-            <Toolbar className={classes.toolBar}>
+            <Toolbar className={classes.toolBar}>                
                 <Typography variant="h6" className={classes.logoLarge}>
                     Danfe Nav Bar
                 </Typography>
