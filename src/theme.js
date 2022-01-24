@@ -1,19 +1,30 @@
 import { createTheme } from "@material-ui/core";
-import { blue, red } from "@material-ui/core/colors";
 
 export const theme = createTheme({
-    pallete: {
+    palette: {
         primary: {
-            main: blue,
+          main: "#333996",
+          light: '#3c44b126'
         },
-        secondary:{
-            main: red,
+        secondary: {
+          main: "#f83245",
+          light: '#f8324526'
+        },
+        background: {
+          default: "#f4f5fd"
+        },
+      },
+      overrides:{
+        MuiAppBar:{
+          root:{
+            transform:'translateZ(0)'
+          }
         }
-    },
-    myButton: {
-        backgroundColor: "red",
-        color: 'white',
-        border: "1px solid black",
-    },
+      },
+      props:{
+        MuiIconButton:{
+          disableRipple:true
+        }
+      }
     
 });
