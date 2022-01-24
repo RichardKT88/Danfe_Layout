@@ -3,6 +3,11 @@ import { Home } from "@material-ui/icons";
 
 const useStyles = makeStyles((theme) => ({
     container: {
+        display: 'flex',
+        flexDirection: 'column',
+        position: 'fixed',
+        width: '320px',
+        left: '0px',
         height: "100%",
         color: "white",
         paddingTop: theme.spacing(10),
@@ -42,23 +47,23 @@ const LeftBar = () => {
     return (
         <Container className={classes.container}>
             <div className={classes.item}>
-                <Home className={classes.icon}/>
+                <Home className={classes.icon} />
                 <Typography className={classes.text}>Home Page</Typography>
             </div>
             <div className={classes.item}>
-                <Home className={classes.icon}/>
+                <Home className={classes.icon} />
                 <Typography className={classes.text}>Home Page</Typography>
             </div>
             <div className={classes.item}>
-                <Home className={classes.icon}/>
+                <Home className={classes.icon} />
                 <Typography className={classes.text}>Home Page</Typography>
             </div>
             <div className={classes.item}>
-                <Home className={classes.icon}/>
+                <Home className={classes.icon} />
                 <Typography className={classes.text}>Home Page</Typography>
             </div>
-               
-            
+
+
         </Container>
     );
 }
