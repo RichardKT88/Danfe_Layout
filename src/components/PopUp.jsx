@@ -1,6 +1,6 @@
 import { Dialog, DialogTitle, DialogContent, makeStyles, Typography } from '@material-ui/core';
 import CloseIcon from '@material-ui/icons/Close';
-import ActionButton from './controls/ActionButton';
+import ActionButton from './Controls/ActionButton';
 
 const useStyles = makeStyles(theme => ({
     dialogWrapper: {

@@ -1,5 +1,5 @@
 import { Dialog, DialogTitle, DialogContent, DialogActions, Typography, makeStyles, IconButton } from '@material-ui/core'
-import Button from './controls/Button';
+import Button from './Controls/Button';
 import NotListedLocationIcon from '@material-ui/icons/NotListedLocation';
 
 

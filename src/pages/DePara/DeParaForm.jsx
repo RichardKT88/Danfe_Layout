@@ -27,8 +27,8 @@ const initialValues = {
     hiredDate: new Date(),
     isPermanent: false,
 }
-const EmployeeForm = (props) => {
-    const { addOrEdit, recordForEdit  } = props;
+const DeParaForm = (props) => {
+    const { addOrEdit, recordForEdit  } = props;    
 
     const validate = (fieldValues = values) => {
         let temp = { ...errors }
@@ -78,13 +78,13 @@ const EmployeeForm = (props) => {
                 <Grid item xs={6}>
                     <Input
                         name="fullName"
-                        label="Full Name"
+                        label="Impressora Laser"
                         value={values.fullName}
                         onChange={handleInputChange}
                         error={errors.fullName}
                     />
                     <Input
-                        label="Email"
+                        label="Impressora Zebra"
                         name="email"
                         value={values.email}
                         onChange={handleInputChange}
@@ -92,7 +92,7 @@ const EmployeeForm = (props) => {
 
                     />
                     <Input
-                        label="Mobile"
+                        label="IP Impressora"
                         name="mobile"
                         value={values.mobile}
                         onChange={handleInputChange}
@@ -100,7 +100,19 @@ const EmployeeForm = (props) => {
 
                     />
                     <Input
-                        label="City"
+                        label="Porta Impressora"
+                        name="city"
+                        value={values.city}
+                        onChange={handleInputChange}
+                    />
+                    <Input
+                        label="IP Servidor Cups"
+                        name="city"
+                        value={values.city}
+                        onChange={handleInputChange}
+                    />
+                    <Input
+                        label="Porta Servidor Cups"
                         name="city"
                         value={values.city}
                         onChange={handleInputChange}
@@ -128,12 +140,12 @@ const EmployeeForm = (props) => {
                         value={values.hireDate}
                         onChange={handleInputChange}
                     /> */}
-                    <Checkbox
+                    {/* <Checkbox
                         name="isPermanent"
                         label="Permanent Employee"
                         value={values.isPermanent}
                         onChange={handleInputChange}
-                    />
+                    /> */}
                     <div>
                         <Button
                             type="submit"
@@ -150,4 +162,4 @@ const EmployeeForm = (props) => {
     )
 }
 
-export default EmployeeForm;
+export default DeParaForm;

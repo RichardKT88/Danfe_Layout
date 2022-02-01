@@ -1,5 +1,5 @@
 import PageHeader from "../../components/PageHeader";
-import EmployeeForm from "./EmployeeForm";
+import DeParaForm from "./DeParaForm";
 import GroupIcon from '@material-ui/icons/Group';
 import { Paper, makeStyles, TableBody, TableRow, TableCell, Toolbar, InputAdornment } from "@material-ui/core";
 import useTable from "../../components/useTable";
@@ -21,6 +21,7 @@ const useStyles = makeStyles(theme => ({
     pageContent: {
         margin: theme.spacing(5),
         padding: theme.spacing(3),
+        width:'100%'
 
     },
     searchInput: {
@@ -41,7 +42,7 @@ const headCells = [
     { id: 'actions', label: 'Actions', disableSorting: true }
 ]
 
-const Employees = () => {
+const DePara = () => {
 
     const classes = useStyles();
     const [recordForEdit, setRecordForEdit] = useState(null);
@@ -51,13 +52,13 @@ const Employees = () => {
     const [notify, setNotify] = useState({ isOpen: false, message: '', type: '' });
     const [confirmDialog, setConfirmDialog] = useState({ isOpen: false, title: '', subTitle: '' })
 
-
     const {
         TblContainer,
         TblHead,
         TblPagination,
         recordsAfterPagingAndSorting
     } = useTable(records, headCells, filterFn);
+
 
     const handleSearch = e => {
         let target = e.target;
@@ -109,12 +110,12 @@ const Employees = () => {
     return (
         <>
             <PageHeader
-                title="Usuários"
-                subTitle="Formulário para cadastrar usuários"
+                title="De Para"
+                subTitle="XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX"
                 icon={<GroupIcon fontSize='large' />}
             />
             <Paper className={classes.pageContent}>
-                <Toolbar>
+                {/* <Toolbar>
                     <Input
                         className={classes.searchInput}
                         label="Search Employee"
@@ -132,7 +133,12 @@ const Employees = () => {
                         className={classes.newButton}
                         onClick={() => { setOpenPopup(true); setRecordForEdit(null); }}
                     />
-                </Toolbar>
+                  
+                </Toolbar> */}
+                <DeParaForm
+                        recordForEdit={recordForEdit}
+                        addOrEdit={addOrEdit}
+                    />
                 <TblContainer>
                     <TblHead />
                     <TableBody>
@@ -170,27 +176,10 @@ const Employees = () => {
                         }
                     </TableBody>
                 </TblContainer>
-                <TblPagination />
+                <TblPagination />              
             </Paper>
-            <Popup
-                title="Employee Form"
-                openPopup={openPopup}
-                setOpenPopup={setOpenPopup}>
-                <EmployeeForm
-                    recordForEdit={recordForEdit}
-                    addOrEdit={addOrEdit}
-                />
-            </Popup>
-            <Notification
-                notify={notify}
-                setNotify={setNotify}
-            />
-            <ConfirmDialog
-                confirmDialog={confirmDialog}
-                setConfirmDialog={setConfirmDialog}
-            />
         </>
     )
 }
 
-export default Employees;
+export default DePara;

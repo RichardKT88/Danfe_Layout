@@ -37,10 +37,10 @@ const NavBar = () => {
         <AppBar position="fixed" className={classes.root}>
             <Toolbar className={classes.toolBar}>                
                 <Typography variant="h6" className={classes.logoLarge}>
-                    Danfe Nav Bar
+                    DANFE Simplificada
                 </Typography>
                 <Typography variant="h6" className={classes.logoSmall} >
-                    Danfe
+                    DANFE
                 </Typography>
                 <div className={classes.icons}>
                     <Badge badgeContent={4} color="secondary" className={classes.badge}>

@@ -48,19 +48,19 @@ const LeftBar = () => {
         <Container className={classes.container}>
             <div className={classes.item}>
                 <Home className={classes.icon} />
-                <Typography className={classes.text}>Home Page</Typography>
+                <Typography className={classes.text}>Tela 1</Typography>
             </div>
             <div className={classes.item}>
                 <Home className={classes.icon} />
-                <Typography className={classes.text}>Home Page</Typography>
+                <Typography className={classes.text}>Tela 2</Typography>
             </div>
             <div className={classes.item}>
                 <Home className={classes.icon} />
-                <Typography className={classes.text}>Home Page</Typography>
+                <Typography className={classes.text}>Tela 3</Typography>
             </div>
             <div className={classes.item}>
                 <Home className={classes.icon} />
-                <Typography className={classes.text}>Home Page</Typography>
+                <Typography className={classes.text}>Tela 4</Typography>
             </div>
 
 
