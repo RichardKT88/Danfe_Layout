@@ -1,12 +1,13 @@
 //import logo from './logo.svg';
 // import './App.css';
 
-import { CssBaseline, Grid, makeStyles, ThemeProvider } from "@material-ui/core";
+import { CssBaseline, makeStyles, ThemeProvider } from "@material-ui/core";
 import { theme } from "./theme";
 
 import NavBar from './components/NavBar'
 import LeftBar from './components/LeftBar';
 import Employees from './pages/Employees/Employees';
+import DePara from './pages/DePara/DePara';
 
 const useStyles = makeStyles({
   appMain: {
@@ -22,7 +23,8 @@ const App = () => {
         <LeftBar />
       <div className={classes.appMain}>
         <NavBar />
-        <Employees />
+        {/* <Employees /> */}
+        <DePara />
       </div>
       <CssBaseline />
     </ThemeProvider>
